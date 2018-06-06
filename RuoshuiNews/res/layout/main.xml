@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background" 
+    android:id="@id/main_layout">
+
+<RelativeLayout 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/titlebar_layout" 
+	android:background="@drawable/titlebar_background" >
+	<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/app_name"
+    android:id="@+id/titlebar_title" 
+    android:layout_marginTop="9dip" 
+    android:textSize="23.0sp" 
+    android:layout_marginLeft="10dip"/>
+	<Button 
+	android:id="@+id/titlebar_refresh" 
+	android:layout_height="wrap_content" 
+	android:layout_width="wrap_content" 
+	android:background="@drawable/titlebar_btn_refresh_selector" 
+	android:layout_marginTop="6.0dip" 	
+	android:layout_marginRight="5.0dip" 
+	android:layout_alignParentRight="true" 
+	 />
+</RelativeLayout>
+<RelativeLayout 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/categorybar_layout" 
+	android:background="@drawable/categorybar_background" 
+	android:layout_marginTop="-16dip">
+    <HorizontalScrollView 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_alignParentTop="true" 
+    android:layout_alignParentLeft="true" 
+    android:layout_marginLeft="6dip" 
+    android:layout_marginRight="15dip"
+    android:layout_centerVertical="true" 
+    android:id="@+id/category_scrollview">
+    
+        <LinearLayout 
+        android:id="@+id/category_layout" 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        </LinearLayout>
+    </HorizontalScrollView>
+    <Button 
+    android:layout_height="15.0dip" 
+    android:layout_width="9.0dip" 
+    android:text=""     
+    android:layout_alignParentRight="true" 
+    android:layout_marginRight="5.0dip"
+    android:layout_centerVertical="true" 
+    android:id="@+id/category_arrow_right" 
+    android:background="@drawable/categorybar_right_arrow">
+    </Button>
+</RelativeLayout>
+<ListView 
+	android:id="@+id/news_list" 
+	android:layout_height="wrap_content" 
+	android:layout_width="match_parent"
+	android:listSelector="@drawable/newslist_item_selector"
+	android:cacheColorHint="#00000000"
+	android:divider="@drawable/list_separator_line">
+</ListView>
+</LinearLayout>
